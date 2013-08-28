@@ -10,6 +10,11 @@
             <tag name="kitano_cache.cache_factory" cache_type="memcached"/>
         </service>
 
+        <service id="kitano_cache.cache_factory.redis"
+                 class="Kitano\CacheBundle\DependencyInjection\CacheFactory\PredisCacheFactory">
+            <tag name="kitano_cache.cache_factory" cache_type="predis"/>
+        </service>
+
         <service id="kitano_cache.cache_factory.apc"
                  class="Kitano\CacheBundle\DependencyInjection\CacheFactory\ApcCacheFactory">
             <tag name="kitano_cache.cache_factory" cache_type="apc"/>
